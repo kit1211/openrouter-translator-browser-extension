@@ -2,7 +2,7 @@
 
 A Chrome extension for translating web pages using OpenRouter API with support for multiple AI models including GPT-4o-mini, GPT-4o, and Gemini 2.5 Flash.
 
-![OpenRouter Translator Logo](src/assets/icons/icon.svg)
+![OpenRouter Translator Logo](bg.png)
 
 ## Features
 
@@ -52,7 +52,6 @@ A Chrome extension for translating web pages using OpenRouter API with support f
    - Place the downloaded files in `src/assets/icons/` directory
 
 ## Loading the Extension in Chrome
-
 1. Open Chrome and navigate to `chrome://extensions/`
 2. Enable "Developer mode" by toggling the switch in the top right corner
 3. Click "Load unpacked" and select the `dist` folder from your project directory
