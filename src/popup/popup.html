@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenRouter Translator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>OpenRouter Translator</h1>
+    </header>
+    
+    <section class="model-selection">
+      <h2>AI Model</h2>
+      <div class="model-dropdown-wrapper">
+        <select id="model-select">
+          <option value="openai/gpt-4o-mini">OpenAI GPT-4o-mini</option>
+          <option value="openai/gpt-4o">OpenAI GPT-4o</option>
+          <option value="google/gemini-2.5-flash-preview:thinking">Google Gemini 2.5 Flash</option>
+          <option value="custom">Custom model...</option>
+        </select>
+      </div>
+      <div id="custom-model-input" class="hidden">
+        <input type="text" id="custom-model" placeholder="Enter model identifier">
+      </div>
+    </section>
+    
+    <section class="quick-translate">
+      <h2>Quick Translate</h2>
+      <div class="language-buttons">
+        <button class="lang-btn" data-lang="en">
+          <span class="flag">🇺🇸</span>
+          <span class="lang-code">EN</span>
+        </button>
+        <button class="lang-btn" data-lang="th">
+          <span class="flag">🇹🇭</span>
+          <span class="lang-code">TH</span>
+        </button>
+        <button class="lang-btn" data-lang="ja">
+          <span class="flag">🇯🇵</span>
+          <span class="lang-code">JP</span>
+        </button>
+        <button class="lang-btn" data-lang="zh">
+          <span class="flag">🇨🇳</span>
+          <span class="lang-code">CN</span>
+        </button>
+        <button class="lang-btn" data-lang="ko">
+          <span class="flag">🇰🇷</span>
+          <span class="lang-code">KR</span>
+        </button>
+        <button class="lang-btn" data-lang="es">
+          <span class="flag">🇪🇸</span>
+          <span class="lang-code">ES</span>
+        </button>
+        <button class="lang-btn" data-lang="fr">
+          <span class="flag">🇫🇷</span>
+          <span class="lang-code">FR</span>
+        </button>
+        <button class="lang-btn" data-lang="de">
+          <span class="flag">🇩🇪</span>
+          <span class="lang-code">DE</span>
+        </button>
+      </div>
+    </section>
+    
+    <section class="default-settings">
+      <h2>Default Settings</h2>
+      <div class="settings-row">
+        <label for="default-language">Default Target Language:</label>
+        <select id="default-language">
+          <option value="en">English (EN)</option>
+          <option value="th" selected>Thai (TH)</option>
+          <option value="ja">Japanese (JP)</option>
+          <option value="zh">Chinese (CN)</option>
+          <option value="ko">Korean (KR)</option>
+          <option value="es">Spanish (ES)</option>
+          <option value="fr">French (FR)</option>
+          <option value="de">German (DE)</option>
+        </select>
+      </div>
+      <div class="save-row">
+        <button id="save-settings" class="primary-btn">Save Settings</button>
+      </div>
+    </section>
+    
+    <section class="actions">
+      <button id="translate-page" class="primary-btn">Translate Page</button>
+      <a href="#" id="options-link">Advanced Options</a>
+    </section>
+    
+    <div id="status-message" class="hidden"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

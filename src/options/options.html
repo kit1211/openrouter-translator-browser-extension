@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenRouter Translator Options</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>OpenRouter Translator Settings</h1>
+      <p class="subtitle">Configure your translation extension settings</p>
+    </header>
+
+    <section class="options-section">
+      <h2>API Configuration</h2>
+      <div class="form-group">
+        <label for="api-key">OpenRouter API Key:</label>
+        <input type="password" id="api-key" placeholder="Enter your OpenRouter API key">
+        <small class="help-text">
+          Your API key is stored locally and never shared. Get an API key from 
+          <a href="https://openrouter.ai/keys" target="_blank">openrouter.ai/keys</a>
+        </small>
+      </div>
+    </section>
+
+    <section class="options-section">
+      <h2>Models Configuration</h2>
+      <div class="form-group">
+        <label for="default-model">Default Model:</label>
+        <select id="default-model">
+          <option value="openai/gpt-4o-mini">OpenAI GPT-4o-mini</option>
+          <option value="openai/gpt-4o">OpenAI GPT-4o</option>
+          <option value="google/gemini-2.5-flash-preview:thinking">Google Gemini 2.5 Flash</option>
+          <option value="custom">Custom model...</option>
+        </select>
+        <div id="custom-model-input" class="hidden">
+          <input type="text" id="custom-model" placeholder="Enter model identifier">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Available Models:</label>
+        <div id="models-list">
+          <!-- Models will be added dynamically -->
+        </div>
+        <div class="model-actions">
+          <input type="text" id="new-model" placeholder="Enter new model identifier">
+          <button id="add-model" class="secondary-btn">Add Model</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="options-section">
+      <h2>Translation Settings</h2>
+      <div class="form-group">
+        <label for="default-target-lang">Default Target Language:</label>
+        <select id="default-target-lang">
+          <option value="en">English (EN)</option>
+          <option value="th" selected>Thai (TH)</option>
+          <option value="ja">Japanese (JP)</option>
+          <option value="zh">Chinese (CN)</option>
+          <option value="ko">Korean (KR)</option>
+          <option value="es">Spanish (ES)</option>
+          <option value="fr">French (FR)</option>
+          <option value="de">German (DE)</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="options-section">
+      <h2>Display Settings</h2>
+      <div class="form-group checkbox-group">
+        <input type="checkbox" id="show-button" checked>
+        <label for="show-button">Show floating translate button on websites</label>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button id="save-options" class="primary-btn">Save Settings</button>
+      <button id="reset-options" class="secondary-btn">Reset to Defaults</button>
+    </div>
+
+    <div id="status-message" class="hidden"></div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

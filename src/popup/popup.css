@@ -1,0 +1,207 @@
+/* Popup Styles */
+:root {
+    --primary-color: #4285f4;
+    --primary-hover: #3367d6;
+    --secondary-color: #f8f9fa;
+    --text-color: #202124;
+    --border-color: #dadce0;
+    --success-color: #0f9d58;
+    --error-color: #ea4335;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #fff;
+    color: var(--text-color);
+    font-size: 14px;
+    width: 350px;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 16px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+section {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Model Selection */
+.model-dropdown-wrapper {
+    width: 100%;
+}
+
+select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: white;
+    font-size: 14px;
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.hidden {
+    display: none;
+}
+
+#custom-model-input {
+    margin-top: 8px;
+}
+
+#custom-model {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Quick Translate Section */
+.language-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.lang-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 4px;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+    background-color: #e8f0fe;
+    border-color: #d2e3fc;
+}
+
+.lang-btn.selected {
+    background-color: #e8f0fe;
+    border-color: var(--primary-color);
+}
+
+.lang-btn .flag {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.lang-btn .lang-code {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Default Settings Section */
+.settings-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+label {
+    flex: 0 0 40%;
+    font-size: 13px;
+}
+
+.save-row {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Actions Section */
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.primary-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 12px;
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+#options-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+#options-link:hover {
+    text-decoration: underline;
+}
+
+/* Status Message */
+#status-message {
+    margin-top: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    text-align: center;
+}
+
+#status-message.success {
+    background-color: #e6f4ea;
+    color: var(--success-color);
+}
+
+#status-message.error {
+    background-color: #fce8e6;
+    color: var(--error-color);
+}
